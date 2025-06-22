@@ -1,0 +1,22 @@
+# Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Eclipse-specific folders and metadata
+.metadata/
+.settings/
+bin/
+.project
+.classpath
+
+# Logs & temporary files
+*.log
+*.tmp
+*.bak
+
+# OS-specific
+.DS_Store
+Thumbs.db
+Desktop.ini
