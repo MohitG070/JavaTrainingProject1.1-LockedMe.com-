@@ -1,5 +1,7 @@
 package com.main;
 
+import com.operations.FileOperations;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -11,14 +13,16 @@ public class Main {
 		
 		int choice1;
 		int choice2;
+		String returnMessage;
 		WorkflowMenus menu = new WorkflowMenus();
+		FileOperations operations = new FileOperations();
 		
 		do {
 			choice1 = menu.mainMenuOptions();
 			
 			switch(choice1) {
 			case 1:
-				System.out.println("<<List All Files>>");
+				operations.listAllFiles();
 				break;
 			
 			case 2:
@@ -27,15 +31,18 @@ public class Main {
 					
 					switch(choice2) {
 					case 1:
-						System.out.println("<<Add the file>>");
+						returnMessage = operations.addFile();
+						System.out.println(returnMessage);
 						break;
 						
 					case 2:
-						System.out.println("<<Delete the file>>");
+						returnMessage = operations.deleteFile();
+						System.out.println(returnMessage);
 						break;
 						
 					case 3:
-						System.out.println("<<Search the file>>");
+						returnMessage = operations.searchFile();
+						System.out.println(returnMessage);
 						break;
 					
 					case 4:
