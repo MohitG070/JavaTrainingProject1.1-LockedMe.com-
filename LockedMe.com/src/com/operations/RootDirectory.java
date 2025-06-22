@@ -9,7 +9,7 @@ public class RootDirectory {
 		
 		File rootDirectory = new File(directory, "root");
 		if (!rootDirectory.exists()) {
-			rootDirectory.mkdir(); // or rootDir.mkdirs() for nested creation
+			rootDirectory.mkdir();
 		}
 		return rootDirectory.getAbsolutePath();
 	}	

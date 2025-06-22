@@ -22,10 +22,6 @@ public class FileOperations {
 			System.out.println("No Files Found: Directory is Empty");
 			return;
 		}
-		
-		File temp = allFiles[0];
-		allFiles[0] = allFiles[4];
-		allFiles[4] = temp;
 
 		Arrays.sort(allFiles);
 		
